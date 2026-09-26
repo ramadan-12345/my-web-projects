@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en"  class="js" data-menu-position="side">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mailchimp</title>
+        <style>
+            body
+            *{
+                margin: auto;
+                padding: auto;
+            }
+            h2,
+        p {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        ul li {
+            float: left;
+        }
+
+        ul li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: small;
+        }
+
+        #para1 {
+            color: white;
+            text-align: center;
+            margin-top: 10vh;
+        }
+
+        div {
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        ul li a:hover {
+            background-color: white;
+        }
+
+        .bg-image {
+                     
+            background-repeat: no-repeat;
+            background-image: url(images.jpg) ;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            height: 100vh;
+            width: 100%;
+        }
+
+        #div1 {
+            background-color: black;
+            color: white;
+            text-align: center;
+        } 
+
+         p.round2 {
+          color:black;
+          background-color: yellow;
+          text-align: center;
+          margin-left: 320px;
+          width: 350px;
+
+        }
+
+          p.round3 {
+          color:black;
+          background-color: yellow;
+          border-radius: 20px;
+          padding: 5px;
+          text-align: center;
+          margin-left: 450px;
+          width: 80px;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 70px 70px 70px;
+            background-color: #231E15;
+            gap: 50px;
+            justify-content: space-evenly;
+        }
+
+        .container div {
+            background-color: #f1f1f1;
+            color: #000;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .recommended {
+            background-color: #231E15;
+            color: white;
+            padding:  50px;
+        }
+
+        .recommended h2 {
+            font-size: 40px;
+            margin-bottom: 70px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .card p {
+            font-size: 15px;
+            margin-top: 30px;
+        }
+
+        .card p {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .card a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 20px;
+        }
+        .p1 {
+            color: chocolate;
+        }
+         p.round4 {
+          color:black;
+          background-color: yellow;
+          border-radius: 20px;
+          padding: 5px;
+          text-align: center;
+          margin-left: 450px;
+          width: 80px;
+        }
+        .logo-selection {
+            width: 100px;
+            overflow: hidden;
+            background-color: white;
+            padding: 50px 0;
+        }
+        .logo-track {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            width: max-content;
+            animation: scroll 10s linear infinite;
+        }
+        .logo img {
+            width: 150px;
+            height: 70px;
+            object-fit: contain;
+        }
+        @keyframes scroll {
+            from {
+                transform:translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: #231E15;
+        }
+        .container div {
+            background-color: #231E15;
+            width: 10px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 50px;
+        }
+        #MYDIV {
+            width: 650px;
+            height: 300px;
+            background-color: #231E15;
+        }
+        .div3{
+            color: white;
+            font-size: medium;
+        }
+        p.ex1 {
+            margin: 35px;
+        }
+        .div1 {
+            color: yellow;
+        }
+        .Automation {
+            background-color: #231E15;
+            color: yellow;
+            padding: 50px;
+        }
+        .Automation h5 {
+            color: yellow;
+        }
+
+        .Automation p {
+            color: white;
+        }
+        a {
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        em{
+            background-color:  #ffdf00;
+        }
+        .Bussiness {
+            background-color: white;
+            color: black;
+            padding: 50px;
+        }
+        .Bussiness h2 {
+            color: black;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .Bussiness a {
+            color: black;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .ss {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        } 
+        
+        button {
+          color:black;
+          background-color: white;
+          border-radius: 40px;
+          padding: 5px 20px;
+         }
+          .Try {
+            background-color: whitesmoke;
+            color: black;
+            padding: 10px;
+            text-align: left;
+        }
+        .Try h2 {
+            color: black;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .Try a {
+            color: black;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        .Try p {
+            color: black;
+            font-size: 15px;
+        }
+        .Try ol {
+            color: black;
+            font-size: 15px;
+            padding: 10px;
+        }
+         .One {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            text-align: center;
+        }
+        .One h2 {
+            color: black;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .One a {
+            color: black;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        .Millions {
+            background-color: #231E15;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .Millions h2 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+         .Disclaimers {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            text-align: left;
+        }
+        .Disclaimers h2 {
+            color: black;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+         .Disclaimers ol {
+            color: black;
+            font-size: 10px;
+            padding: 10px;
+        }
+        .related {
+            background-color: #E7B75F;
+            color: black;
+            padding: 20px;
+            text-align: left;
+        }
+         .related a {
+            color: black;
+            font-size: 10px;
+            text-align: left;
+        }
+         .related a:hover {
+            color: black;
+            font-size: 10px;
+            text-decoration: underline;
+        }
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        td, th {
+        text-align: left;
+        padding: 2px;
+        }
+          .fill {
+        background-color:  #E7B75F;
+        }
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        td, th {
+        text-align: left;
+        padding: 8px;
+        color: black;
+        }
+        a {
+        color: black;
+        transition: 0.4s ease-in-out;
+        }
+        a:hover {
+        background-color: yellow;
+        }
+         
+        
+</style>
+</head>
+<body>
+
+            <b><h2>INTUIT</h2></b>
+    <p id="div1">Save 50% for 12 months - limited time offer. Get started today.</p>
+    <ul>
+        <li><a href="# industries and solutions">industries and solutions</a></li>
+        <li><a href="#Integration">Integration</a></li>
+        <li><a href="#Resources">Resources</a></li>
+        <li><a href="#switch to mailchimp">switch to mailchimp</a></li>
+        <li><a href="#pricing">pricing</a></li>
+    </ul>
+     <section>
+    <div class="bg-image">
+        <b><h1 id="para1"><h1>Email & SMS marketing</h1></b>
+        <p class="round2">minus the learning curve</p>
+        <p id="para1">Drive revenue with intuitive marketing analytics, automation, and AI Tools</p>
+        <p class="round3">sign in</p>
+    </div>
+</section>
+<section class="recommended">
+    <h2>Recommended for your business</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="SMS_iPhone.jpg" alt="SMS_iphone">
+           <p>Reach more customers with SMS</p>
+            <p>
+                Boost results and use integrated SMS to reach
+                your audience with the right message on the right device.
+            </p>
+            <a class="ctaArrow"href="http://solutions/sms-marketing-tools/">learn about SMS marketing &#8594;</a>
+        </div>
+
+        <div class="card">
+            <img src="Drive_Sale.jpg" alt="Drive">
+            <p>Discover new ways to drive sales</p>
+            <p>
+                Use AI-powered tools to create effective,
+                targeted emails that turn shoppers into buyers.
+            </p>
+            <a class="ctaArrow" href="https://mailchimp.com/solutions/ai-tools/">Learn about driving sales &#8594;</a>
+        </div>
+
+        <div class="card">
+            <img src="content.jpg" alt="Content">
+            <p>Send high-quality content with ease</p>
+            <p>
+                With our drag-and-drop builder, AI-powered tools,
+                and beautiful templates, designing emails is a breeze.
+            </p>
+            <a class="ctaArrow" href="https://mailchimp.com/solutions/content-creation-tools/">see our content creation tool &#8594</a>
+        </div>
+
+        <div class="card">
+            <img src="Marketing.jpg" alt="marketig">
+            <p>Save time on repetitive task</p>
+            <p>
+              Use always-on automations to drive revenue with less attention from you and your team.
+            </p>
+            <a href="https://mailchimp.com/solutions/marketing-automation-tools/">See our content creation tools &#8594</a>
+        </div>
+
+        <div class="card">
+            <img src="Integrations.jpg" alt="intergration">
+            <p>Discover 300+ intergration</p>
+            <p>
+                Mailchimp seamlessly connects to the app and platform your business already use.
+            </p>
+            <a href="https://mailchimp.com/integrations/">Vist the intergration directory &#8594</a>
+        </div>
+
+        <div class="card">
+            <img src="Support.jpg" alt="support">
+            <p>Count on award-winning support</p>
+            <p>
+               Every paid mailcimp plan includes 24/7 live chat and emial support. We're here to help-around the clock.
+            </p>
+            <a href="https://mailchimp.com/why-mailchimp/support/">See support option &#8594</a>
+        </div>
+
+    </div><br><br>
+    <p class="round4">see pricing</p>
+</section>
+<section class="logo-section">
+    <div class="logo-track">
+        <div class="logo">
+            <img src="BA_Primary.jpg" alt="BA_Primary">
+        </div>
+        <div class="logo">
+            <img src="Gap-Inc.jpg" alt="Gap-Inc">
+        </div>
+        <div class="logo">
+            <img src="Canva.jpg" alt="canva">
+        </div>
+        <div class="logo">
+            <img src="ReMax.jpg" alt="ReMax">
+        </div>
+        <div class="logo">
+            <img src="The-Onion.jpg" alt="The-Onion">
+        </div>
+         <div class="logo">
+            <img src="World-Central-Kitchen.jpg" alt="World-Central-Kitchen">
+        </div>
+        <div class="logo">
+            <img src="Subway.jpg" alt="subway">
+        </div>
+        <div class="logo">
+            <img src="University-Miami.jpg" alt="University-Miami">
+        </div>
+        <div class="logo">
+            <img src="presents.jpg" alt="Presents">
+        </div>
+        <div class="logo">
+            <img src="Spotify.jpg" alt="Spotify">
+        </div>
+        
+    </div>
+</section>
+<section class="Automation">
+    <h5>Automation</h5>
+
+    <p>Mailchimp customers saw up to <em>8x more</em> orders on average with automation flows.</p>
+    <p>Based on orders generated from bulk emails of paid plan users across all available geographics from january 2023-january 2025. Marketing Automations Flows functionality varies by plan type.</p>
+    <a href="https://mailchimp.com/solutions/marketing-automation-tools/">learn about marketing automations <em>&#8594</em></a>
+</section>
+<section class="Bussiness">
+    <h2 class="Business h2">Businesses like yours are thriving with Mailchimp</h2>
+    <a href="https://mailchimp.com/case-studies/">View all case studies <em>&#8594</em></a>
+    <img src="Hero.jpg" alt="Hero">
+    <div class="ss">
+        <button class="p.round7">Request a Demo</button>
+        <button class="p.round7">Start Free Trial</button>
+    </div>
+    </section>
+    <section>
+    <div class="Try">
+    <h2 class="Try h2">Try our Standard plan for 50% off!</h2>
+    <p class="Try p">Spend less to grow more with 50% off for 12 months, even if you change to our<br> Premium or Essentials plans. Cancel or downgrade to our basic Free plan at any time.</p>
+     <ol>
+    <li>Generative AI features</li>
+    <li>Actionable insights into audience growth and<br> conversion funnels</li>
+    <li>Enhanced automations</li><br><br>
+    <li>Custom-coded email templates</li>
+    <li>Customizable Popup forms</li>
+    <li>Personalized onboarding</li>
+    </ol> 
+     <a href="https://mailchimp.com/pricing/marketing/">See all plans <em>&#8594</em></a>
+    </div>
+    </section>
+    <section>
+        <div class="One">
+            <h2 class="One h2">One platform, everything you need to grow your business</h2>
+            <p class="One p">Mailchimp integrates with hundreds of tools to help you save time and get more done.</p>
+            <a href="https://mailchimp.com/integrations/">View all intergrations <em>&#8594</em></a>
+    </section>
+    <section>
+        <div class="Millions">
+            <h2 class="Millions h2">Millions of users trust us with their email <br>marketing. You can too.</h2>
+              <p class="round3">sign up</p>
+            </div>
+    </section>
+    <section>
+        <div class="Disclaimers">
+            <h2 class="Disclaimers h2"><B>Disclaimers</B></h2>
+            <ol>
+            <li><B>Feature availability:</B> Availability of features and functionality varies by plan type. For details, view Mailchimp’s various plans and pricing.</li>
+            <li>Intuit Intelligence (beta) has limited availability to customers on paid plans. Intuit Intelligence can make mistakes; user is responsible for reviewing and approving AI-generated content before sending.</li>
+            <li>SMS is available as an add-on to paid plans in select countries and requires application and approval before purchase. Credits are purchased monthly and do not roll over. See terms for details</li>
+            <li>Certain AI features and functionality available in English only.</li>
+            <li><B>CTA proximity:</B> “Terms apply” / “14-day trial terms apply” next to Start Free Trial</li>
+            </ol> 
+        </div>
+    </section>
+    <section>
+        <div class="related">
+        <table>
+        <tr>
+            <th><h2 class="related h2">Related resources</h2></th>
+        </tr>
+        <tr>
+            <td><a class="related a" href="https://mailchimp.com/marketing-glossary/google-my-business/">Google My Business</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://mailchimp.com/resources/how-to-buy-a-domain-name/">How to Buy a Domain Name: Domain Registration Guide</a></td>
+        </tr>
+        <tr>
+            <td><a href="https://mailchimp.com/resources/chat-gpt-ai-content-writing">ChatGPT: What to Know About This AI Content Writing Tool</a></td>
+        </tr>
+        </table>
+    </section>
+    <section class="fill">
+        <table>
+    <tr>
+        <th>Products</th>
+        <th>Resources</th>
+        <th>Community</th>
+        <th>Company</th>
+        <th>Help</th>
+    </tr>
+    <tr>
+        <td><a href="https://mailchimp.com/why-mailchimp/">Why Mailchimp</a></td>
+        <td><a href="https://mailchimp.com/resources/">Marketing Library</a></td>
+        <td><a href="https://mailchimp.com/andco/">Agencies & Freelancers</a></td>
+        <td><a href="https://mailchimp.com/about/">Our Story</a></td>
+        <td><a href="https://mailchimp.com/contact/">Contact Us</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://mailchimp.com/whats-new/">Product Update</a></td>
+        <td><a href="https://mailchimp.com/resources/free-marketing-features-overview/">Free Marketing Tools</a></td>
+        <td><a href="https://mailchimp.com/developer/">Developers</a></td>
+        <td><a href="https://mailchimp.com/newsroom/">Newsroom</a></td>
+        <td><a href="https://mailchimp.com/experts/">Hire an Expert</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://mailchimp.com/features/email/">Email Marketing</a></td>
+        <td><a href="https://mailchimp.com/marketing-glossary/">Marketing Glossary</a></td>
+        <td><a href="https://mailchimp.com/events/">Events</a></td>
+        <td><a href="https://mailchimp.com/">Give Where You Live</a></td>
+        <td><a href="https://mailchimp.com/help/">Help Center</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://mailchimp.com/features/transactional-email/">Transactional Email</a></td>
+        <td><a href="https://mailchimp.com/integrations/">Intergrations Directory</a></td>
+        <td><a href=""></a></td>
+        <td><a href="https://mailchimp.com/jobs/">Careers</a></td>
+        <td><a href="https://mailchimp.com/sales/">Talk to Sales</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://mailchimp.com/resources/mailchimp-compa">How We Compare</a></td>
+        <td><a href=""></a></td>
+        <td><a href=""></a></td>
+        <td><a href="https://www.intuit.com/accessibility/">Accessibility</a></td>
+        <td><a href=""></a></td>
+    </tr>
+    <tr>
+        <td><a href="https://mailchimp.com/gdpr/">GDPR Compliace</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://mailchimp.com/about/security/">Security</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://status.mailchimp.com/">Status</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://mailchimp.com/features/mailchimp-mobile/">Mobile App</a></td>
+    </tr>
+    </table>
+
+    </section>
+</body>
+
+
+</html>

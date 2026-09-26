@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>HULO</title>
+        <style>
+        .rootv {
+        --yellow:#F6D027;     
+        --ink:#14140F;         
+        --white:#FFFFFF;       
+        --cream:#FFF8E1;      
+        --line: rgba(20,20,15,0.12);
+            }
+        body {
+        background: #f6d027;
+        color:#14140f;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+      overflow-x: hidden;
+            }
+      .hero h1 nav a {
+                font-family:'Poppins',sans-serifs;
+             }
+            
+      header {
+      position:fixed;   /* stays pinned to the top while the page scrolls */
+      top:0;left:0;right:0;
+      z-index:100;       /* sits above all other content */
+      padding:20px 32px; /* breathing room around the pill */
+      transition:padding .35s ease;
+      }
+     .nav-inner {
+      max-width:1320px;   /* caps width on big screens so nav doesn't stretch edge to edge */
+      margin:0 auto;      /* centers the nav horizontally */
+      display:flex;
+      align-items:center;
+      justify-content:space-between; /* logo left, links center, buttons right */
+      padding:14px 16px 14px 20px;
+      border-radius:999px; /* fully rounded pill shape, as in screenshot 2 */
+      transition:background .35s ease, box-shadow .35s ease, padding .35s ease;
+      }
+      header.scrolled .nav-inner {
+      background:var(--white);
+      box-shadow:0 12px 30px rgba(20,20,15,0.14);
+      padding:10px 12px 10px 20px;
+    }
+      .nav-links a {
+      font-weight:600;
+      font-size:15px;
+      position:relative; /* needed so the ::after underline can be positioned against this link */
+      padding:4px 0;
+      text-decoration: none;
+      color: #14140F;
+    }
+    .nav-links {
+      display:flex;
+      align-items:center;
+      gap:36px;
+    }
+    .nav-links a::after {
+      content:"";
+      position:absolute;
+      left:0;bottom:-2px;
+      width:0;height:2px;
+      background:var(--ink);
+      transition:width .25s ease;
+    }
+
+     .nav-links a:hover::after {
+      width:100%;
+    }
+     .nav-right {
+      display:flex;
+      align-items:center;
+      gap:22px;
+    }
+     .lang {
+      font-weight:700;
+      font-size:14px;
+      padding-right:20px;
+      border-right:1.5px solid var(--ink); /* small divider before the button, matches screenshot */
+      cursor:pointer;
+     }
+     .free {
+      font-size: 20px;
+     }
+     .btn {
+       background-color: black;
+       padding: 15px 40px;
+       color: #FFFFFF;
+       border-radius: 10px;
+       border: none;
+       padding: 14px 22px;
+        gap: 8px;
+        color:#FFFFFF;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+       }
+       btn:hover {
+        background: white;
+        color: #333;
+       }
+        .hero h1 {
+             font-weight: 900;
+            font-size: clamp(44px, 8.4vw,122px);
+            line-height: 0.92;
+            letter-spacing: -2px;
+            max-width: 1050px;
+            margin: auto;
+             }
+             .hero-c p {
+              max-width: 560px;
+            font-size: 19px;
+             line-height: 1.6;
+             font-weight: 500;
+             }
+             .Ghost h4 {
+        padding:20px 40px;
+        font-size: 50px;
+       } 
+       .Ghost-head {
+        display:flex;
+        justify-content: space-between;
+        padding:  100px;
+       }
+       .Ghost p {
+        font-size: 21px;
+       }
+        .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+}
+.card img {
+    width: 85%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 0;
+}
+.s-head {
+  display: flex;
+  justify-content: space-between3;
+}
+.s-head h5 {
+  font-size: 50px;
+}
+.s-head p {
+  font-size:21px;
+}
+.gtn {
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+}
+.die-head h5 {
+font-size: 50px;
+}
+.reaper h6 {
+   font-size: 50px;
+  }
+.aces {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.aces-title {
+      background:var(--white);
+      border:1.5px solid var(--line);
+      border-radius:none;
+      padding: 15px;
+      
+}
+.aces-title img {
+  height:190mpx ;width:70% ;object-fit:contain;
+}
+.cta-band {
+  text-align: center;
+}
+.cta-band h6 {
+  font-size: 50px;
+  
+}
+.cta-band p {
+  font-size: 20px;
+   
+}
+.newsletter {
+  background: #14140F;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  .footer {
+    min-height: 100vh;
+    padding:150px 5% 70px ;
+  }
+  .footer-content {
+max-width: 1700px;
+margin: auto;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8%;
+  }
+  .newsletter h7 {
+font-size: 44px;
+line-height: 1;
+letter-spacing: -1.5px;
+margin-bottom: 28px;
+
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 76px;
+  }
+  .email {
+    width: 565px;
+    height: 90px;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 0 36px;
+    color: #FFFFFF;
+    font-size: 21px;
+    outline: none;
+  }
+  .email::placeholder {
+    color: #777;
+  }
+  .email::focus {
+    border-color:#FFFFFF
+  }
+
+             </style>
+    </head>
+    <body>
+        <header id="site-header">
+                <div class="nav-inner">
+                    <a href="#top" class="logo" aria-label="hulo home">
+                        <img src=" " alt="">
+                    </a>
+                    <nav class=" nav-links">
+                        <a href="#what-we-do">What we do</a>
+                        <a href="#about">About us</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#get-involved">Get involved</a>
+                    </nav>
+                    <div class="nav-right">
+                        <span class="lang">FR</span>
+                        <button class="btn"><span>Contact <br> us</span>
+                            <span class="arrow">→</span>
+                        </button>
+
+                    </div>
+                </div>
+            </header>
+            <div class="nav-spacer"></div>
+             <section class="hero" style="padding-top: 20px;">
+                <h1>Together we <br>are Stronger</h1>
+                <div class="hero-c">
+                    <p>Hulo is the first humanitarian logistics cooperative. We connect logistics stakeholders to improve the efficiency of humanitarian aid and reduce our environmental impact by pooling resources, optimising supply chain management, and developing new Digital Solutions for today's challenging world. </p>
+            </div>
+          <div class="hero-cta">
+            <button class="btn">Discover what we do <span class="arrow">→</span></button>
+          </div>
+            </section>
+             <section class="free" id="free">
+               <h2>How can we increase the impact of humanitarian operations?</h2> 
+               <p>Humanitarian needs are increasing at an alarming rate while funding is failing to keep pace.<br> Climate change is a reality that is here to stay, further complexifying aid operations. As <br>humanitarians, we have a duty to increase aid's efficiency, reduce its environmental impact and<br> avoid duplication of efforts.
+              <p> Of the more than $55.5 billion requested for 2023 (OCHA), logistics departments are<br> responsible for purchasing the goods and services to meet the needs of approximately 363<br> million people in need worldwide.
+                We believe that the humanitarian sector is at a turning point.<br> We must change our ways of working to increase solidarity and the pooling of resources.</P>
+               <p>Together we can innovate and provide better, more efficient aid.</p>
+               <button class="btn">Discover what we do <span class="arrow">→</span></button>
+            </section>
+             <section class="Ghost">
+<div class="Ghost-head">
+    <div><h4>The hulo<br>approach</h4></div>
+    <div class="Ghost">
+<p>Hulo provides a structured approach to save time and money,<br>increase service quality, reduce aid’s environmental footprint and <br>improve access to markets and expertise for humanitarian<br> organisations.</p>
+<p>Hulo's approach is data- and field-driven to build collaborative and<br> efficient solutions.</p>
+<p>By working together, we can bring a paradigm shift for the aid sector.</p>
+    </div> 
+</div>
+<div class="Ghost-img">
+    <img src="The-Hulo-approach-Schema-01-2048x1156.png" alt="The-Hulo-approach-Schema-01-2048x1156">
+</div>
+            </section>
+             <section class="service">
+               <div class="s-head">
+                <h5>What we do</h5>
+                <p>We offer a variety of services for the humanitarian and logistics<br> community. Our services are open to all organisations – be they hulo<br> members or external participants – globally & locally.</p>
+               </div>
+                <div class="cards">
+  <div class="card">
+    <img src="Link-Post.png" alt="Link-Post">
+    <h2>LINK: Supply Chain Management <br>Software</h2>
+    <button class="gtn">Learn more <span class="spear">→</span></button>
+  </div>
+  <div class="card">
+    <img src="TEMPshared-ressources.jpg" alt="TEMPshared-ressources">
+    <h2>Shared Resources</h2>
+    <p>Discover our digital platform to share, buy, and sell resources</p>
+    <button class="gtn">Learn more <span class="spear"></span>→</button>
+  </div>
+  <div class="card">
+    <img src="krakenimages.jpg" alt="karekenimages">
+    <h2>Joint Initiatives</h2>
+    <p>>Take part in our Joint Initiatives in procurement, human resources,</p>
+    <button class="gtn">Learn more <span class="spear"></span>→</button>
+  </div>  
+  <div class="card">
+    <img src="TEMPjoint-transport.jpg" alt="TEMPjoint-transport">
+    <h2>International Joint Transport</h2>
+<p>Benefit from our quick and effective Global Joint Transport Initiatives.</p>
+<button class="gtn">Learn more <span class="spear">→</span></button>
+  </div>
+  <div class="card">
+    <img src="TEMPbusiness-analysis.jpg" alt="TEMPbusiness-analysis">
+    <h2>Business Analytics and Research (BAR)</h2> 
+     <p>Access supply chain data analytics.</p>
+<button class="gtn">Learn more <span class="spear">→</span></button>
+  </div>
+    </body>
+</section>
+ <section class="die">
+              <div class="die-head">
+                <div><h5>Where we<br>work</h5></div>
+                <div><p>Hulo is present in the following countries. Please follow <br>us on LinkedIn or visit our blog to learn more.</p></div>
+              </div>
+
+            </section>
+            
+            <div class="reaper">
+                <h6>We believe in<br> strength in <br>numbers</h6>
+              <div class="aces">
+              <div class="aces-title"><img src="Acted.jpg" alt="Acted"></div>
+              <div class="aces-title"><img src="action-contre-la-faim.jpg" alt="action-contre-la-faim"></div>
+               <div class="aces-title"><img src="Bioport.jpg" alt="Bioport"></div>  
+               <div class="aces-title"><img src="unnamed-file.png" alt="unnamed-file"></div>
+               <div class="aces-title"><img src="Croix-Rouge francaise.jpeg" alt="Croix-Rouge"></div>
+               <div class="aces-title"><img src="Fleet.jpg" alt="Fleet"></div>
+               <div class="aces-title"><img src="handicap.jpeg" alt="handicap"></div>
+               <div class="aces-title"><img src="IRC_LOGO_SECONDARY_HORIZONTAL_CMYK-1536x533.jpg" alt="IRC_LOGO_SECONDARY_HORIZONTAL_CMYK-1536x533"></div>
+               <div class="aces-title"><img src="Intersos.jpeg" alt="Intersos"></div>
+               <div class="aces-title"><img src="Medecins.jpeg" alt="Medecins"></div>
+               <div class="aces-title"><img src="logo-MERCY-CORPS.png" alt="logo-MERCY-CORPS"></div>
+               <div class="aces-title"><img src="NRC-logo.png" alt="NRC-logo"></div>
+               <div class="aces-title"><img src="OX_OSP_HL_C_RGB-2-1536x315.jpg" alt="OX_OSP_HL_C_RGB-2-1536x315"></div>
+               <div class="aces-title"><img src="Logo-Plan-Bleu.png" alt="Logo-Plan-Bleu"></div>
+               <div class="aces-title"><img src="PUI-1536x601.png" alt="PUI-1536x601"></div>
+               <div class="aces-title"><img src="Save-The-Children-Logo-1536x864.jpg" alt="Save-The-Children-Logo-1536x864"></div>
+               <div class="aces-title"><img src="ProsperGlobal_PrimaryLogo_OnLight_RGB.png" alt="ProsperGlobal_PrimaryLogo_OnLight_RGBv"></div>
+              </div>
+            </div>
+            <div class="reaper">
+              <h6>Participant organisations</h6>
+              <div class="aces">
+                <div class="aces-title"><img src="AGED.jpg" alt="AGED"></div>
+                <div class="aces-title"><img src="Logo-de-ATAD-1-e1705919457905.png" alt="Logo-de-ATAD-1-e1705919457905"></div>
+                <div class="aces-title"><img src="LOGO-BIFERD-1.jpg" alt="LOGO-BIFERD-1"></div>
+                <div class="aces-title"><img src="Concern-Worldwide-Burkina-Faso-1536x521.jpg" alt="Concern-Worldwide-Burkina-Faso-1536x521"></div>
+                <div class="aces-title"><img src="DRC_UK_RED_rgb.png" alt="DRC_UK_RED_rgb"></div>
+                <div class="aces-title"><img src="educo-png-1536x734.png" alt="educo-png-1536x734"></div>
+                <div class="aces-title"><img src="FAIRMED.jpg" alt="FAIRMED"></div>
+                <div class="aces-title"><img src="HEKS-EPER-Logo-horizontal-.jpg" alt="HEKS-EPER-Logo-horizontal-"></div>
+                <div class="aces-title"><img src="IMC.png" alt="IMC"></div>
+                <div class="aces-title"><img src="Terre-des-hommes.jpg" alt="Terre-des-hommes"></div>
+                <div class="aces-title"><img src="Tin-Tua.jpg" alt="Tin-Tua"></div>
+                <div class="aces-title"><img src="UNIJED-AFRIQUE.png" alt="UNIJED-AFRIQUE"></div>
+              </div>
+            </div>
+            <div class="reaper">
+              <h6>Institutional donors</h6>
+              <div class="aces">
+                <div class="aces-title"><img src="EN-Funded-by-the-EU-PANTONE-1536x322.png" alt="EN-Funded-by-the-EU-PANTONE-1536x322"></div>
+                <div class="aces-title"><img src="LOGO-MIN_Europe_et_Affaires_Etrangeres-pour-CDCS-visib-1536x1404.jpg" alt="LOGO-MIN_Europe_et_Affaires_Etrangeres-pour-CDCS-visib-1536x1404"></div>
+                <div class="aces-title"><img src="Logo-Plan-Bleu 1.png" alt="Logo-Plan-Bleu 1"></div>
+              </div>
+            </div>
+            <div class="reaper">
+              <h6>Academic, private sector &amp; other projects</h6>
+              <div class="aces">
+                <div class="aces-title"><img src="Airbus_Foundation_Size2_Blue_Green_RGB-1536x142.jpg" alt="Airbus_Foundation_Size2_Blue_Green_RGB-1536x142"></div>
+                <div class="aces-title"><img src="CHORD_Logo_Landscape_RGB-1536x528.png" alt="CHORD_Logo_Landscape_RGB-1536x528"></div>
+                <div class="aces-title"><img src="FHL-Logo.jpg" alt="FHL-Logo"></div>
+                <div class="aces-title"><img src="HUMLOG-1536x513.jpg" alt="HUMLOG-1536x513"></div>
+                <div class="aces-title"><img src="Lockup_INSEAD_HRG_green_XL-1536x570.png" alt="Lockup_INSEAD_HRG_green_XL-1536x570"></div>
+                <div class="aces-title"><img src="current-TL-logo-e1718791490449-1536x264.jpg" alt="current-TL-logo-e1718791490449-1536x264"></div>
+              </div>
+            </div>
+            <section id="get-involved">
+              <div class="cta-band">
+<h6>Get involved</h6>
+<p>There are many ways to join hulo’s humanitarian logistics ecosystem.<br> Whether you work in an international NGO, a <br>local aid organisation, a private company, or an academic institution, you can get involved. </p>
+<button class="btn">Get involved <span class="arrow">→</span></button>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="newsletter">
+      <h7>Subscribe to our newsletter</h7>
+      <p class="description">
+        Hulo publishes regular activity reports from different parts of the world.<br>
+      Join the movement &amp; learn more about our services by subscribing to<br>
+          newsletter.
+      </p>
+      <div class="form">
+        <input
+        type="email"
+        class="email"
+        placeholder="Email address"
+        >
+        <button class="subscribe">
+          Subscribe
+          <span>→</span>
+        </button>
+      </div>
+      <label class="privacy">
+        <input type="checkbox">
+        <span>By checking this box, I accept the privacy policy of this site</span>
+        <span>*</span>
+      </label>
+      </div>
+    </div>
+    <div class="social-section">
+      <h7>
+        Follow us on social<br>
+          networks and stay tuned
+      </h7>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" class="youtube" aria-label="YouTube">
+           ▶
+        </a>
+      </div>
+    </div>
+    <hr class="line">
+  </footer>
+ 
+ </section>
+        </body>
+       
+</html>     
