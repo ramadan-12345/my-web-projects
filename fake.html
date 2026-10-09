@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collection</title>
+    <style>
+        /* Add your CSS styles here */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf9f7;
+            color: #514438;
+        }
+
+        .collection {
+            max-width: 1450px;
+            margin: 0 auto;
+            padding: 40px 25px;
+        }
+
+        .collection-title {
+            font-size: 23px;
+            font-weight: 400;
+            color: #c58b38;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .product-card {
+            background-color: #f5f5f5;
+            border: 1px solid #e5e1dc;
+            border-radius: 9px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 275px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-info h3 {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            line-height: 1.45;
+            font-weight: 400;
+            min-height: 78px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 21px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            color: #947354;
+            margin-bottom: 25px;
+        }
+
+        .product-info button {
+            width: 100%;
+            margin-top: auto;
+            padding: 20px 8px;
+            border: 3px solid #947354;
+            border-radius: 12px;
+            background: transparent;
+            color: #947354;
+            font-size: 17px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .product-info button:hover {
+            background-color: #947354;
+            color: white;
+        }
+
+        .view-all {
+            display: block;
+            width: fit-content;
+            margin: 38px auto 0;
+            color: #c58b38;
+            font-size: 17px;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        /* Tablets */
+        /* @media (max-width: 1100px) {
+            .product-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            } */
+        }
+
+        /* Phones */
+        /* @media (max-width: 700px) {
+            .collection {
+                padding: 30px 15px;
+            } */
+
+        .product-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .product-card img {
+            height: 190px;
+        }
+
+        .product-info {
+            padding: 15px 12px;
+        }
+
+        .product-info h3 {
+            font-size: 15px;
+            min-height: 65px;
+        }
+
+        .price {
+            font-size: 16px;
+        }
+
+        .product-info button {
+            font-size: 13px;
+            padding: 14px 5px;
+            border-width: 2px;
+        }
+
+        .collection-title {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="collection">
+
+        <h2 class="collection-title">Organic Pedestal Collection</h2>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="18.jpg" alt="Dark wooden pedestal">
+                <div class="product-info">
+                    <h3>AUSI Solid Wood Pedestal - Charcoal</h3>
+                    <p class="price">From $69.50 USD</p>
+                    <button>Choose options</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="mac.jpg" alt="Natural wooden pedestal">
+                <div class="product-info">
+                    <h3>AUSI Solid Wood Pedestal - Natural</h3>
+                    <p class="price">From $89.99 USD</p>
+                    <button>Choose options</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="ipad.jpg" alt="Natural stone pedestal">
+                <div class="product-info">
+                    <h3>Elysian Natural Travertine Plinth</h3>
+                    <p class="price">From $399.99 USD</p>
+                    <button>Choose options</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="watch.jpg" alt="Architectural display pedestal">
+                <div class="product-info">
+                    <h3>Lumi Architectural Pedestal</h3>
+                    <p class="price">$899.99 USD</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="iphones.jpg" alt="Decorative stone side table">
+                <div class="product-info">
+                    <h3>Custom Travertine Pedestal Side Table</h3>
+                    <p class="price">From $499.99 USD</p>
+                    <button>Choose options</button>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#" class="view-all">View all</a>
+
+    </section>
+
+</body>
+
+</html>
